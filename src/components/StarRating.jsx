@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa"; // Import the star icon from React Icons
-const totalStars = [1,2,3,4,5] 
+const totalStars = [1,2,3,4,5]
+ 
 const StarRating = () => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
@@ -12,13 +13,13 @@ const StarRating = () => {
           const starValue = index + 1;
           return (
             <span
-              key={index}
+            key={index}
               className={`star ${starValue <= (hover || rating) ? "active" : ""}`}
               onClick={() => setRating(starValue)}
               onMouseEnter={() => setHover(starValue)}
               onMouseLeave={() => setHover(0)}
             >
-              {/* React Icon used here */}
+              {/* React Icon used heare */}
               <FaStar size={30} /> 
             </span>
           );
